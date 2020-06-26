@@ -1,0 +1,37 @@
+// Преимущества
+.advantages {
+  //display: flex;
+  //justify-content: center;
+  @extend %list;
+}
+
+.advantages-container {
+  //display: flex;
+  padding: 25px 192px;
+  margin-bottom: 30px;
+  background-color: $advantages-bgc;
+  border-radius: 4px;
+}
+
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.advantages-title {
+  @extend %text;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+  text-align: center;
+  font-weight: 700;
+  color: $title-text-color;
+}
+
+.advantages-description {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}

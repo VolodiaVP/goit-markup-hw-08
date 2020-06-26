@@ -1,0 +1,38 @@
+.activities {
+  //display: flex;
+  //justify-content: center;
+  @extend %list;
+
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .item {
+    position: relative;
+    width: calc((100% -2 * 30px) / 3);
+  }
+}
+
+.activities-pic {
+  display: block;
+  margin-bottom: 0px;
+}
+
+.activities-text {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  width: 100%;
+
+  padding: 27px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  @extend %text;
+  font-weight: 700;
+  text-align: center;
+
+  color: $white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}

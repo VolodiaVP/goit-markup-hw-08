@@ -1,0 +1,26 @@
+// цвет основного текста #757575
+// цвет заголвков #212121
+// акцент #2196f3
+// белый #ffffff
+// цвет границы клиентов #AFB1B8
+// цвет лого клиентов #afb1b8
+// цвет фона подвала #2f303a
+// цвета фона преимуществ #f5f4fa
+// цвет границы хедера #ECECEC
+// цвет границы примеров #EEEEEE
+
+// Палитра
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-text-color: #2196f3;
+$white-color: #ffffff;
+$footer-bgc: #2f303a;
+$advantages-bgc: #f5f4fa;
+$header-border: #ececec;
+$exampes-border: #eeeeee;
+$clients-border: #afb1b8;
+$clients-logo: #afb1b8;
+
+// Переменные переходов
+$transition-duration: 250ms;
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

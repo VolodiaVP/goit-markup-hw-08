@@ -1,0 +1,258 @@
+// Бекдроп
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity $transition-duration $transition-timing-function;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) rotate(360deg) scale(0.5);
+}
+
+// Модальное окно
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+
+  width: 528px;
+  border-radius: 4px;
+
+  background-color: $white-color;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  transition: transform $transition-duration $transition-timing-function;
+}
+
+// Кнопка закрытия модального окна
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-block;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: $white-color;
+  transform: scale(1);
+  transition: border $transition-duration $transition-timing-function,
+    transform $transition-duration $transition-timing-function;
+
+  &:hover {
+    transform: scale(1.25);
+    border: 1px solid $accent-text-color;
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 11px;
+  height: 11px;
+
+  padding: 0;
+
+  transition: fill $transition-duration $transition-timing-function;
+
+  .button-close:hover & {
+    fill: $accent-text-color;
+  }
+}
+
+// Форма модального окна
+.form-modal {
+  padding: 40px;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-text-color;
+}
+
+// Контейнер поля ввода данных формы модального окна
+.form-field {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+// Поле ввода данных формы модального окна
+.form-input {
+  width: 100%;
+
+  padding: 12px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: $accent-text-color;
+  transform: translate(-23px, -40px);
+}
+
+.form-input:focus ~ .icon-form {
+  fill: $accent-text-color;
+}
+
+// Подпись поля ввода модального окна
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $primary-text-color;
+
+  transition: color $transition-duration $transition-timing-function,
+    transform $transition-duration $transition-timing-function;
+}
+
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  transition: fill $transition-duration $transition-timing-function;
+}
+
+// Поле комментрариев формы модального окна
+.form-field.comment {
+  margin-bottom: 20px;
+}
+
+.textarea {
+  width: 100%;
+
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
+}
+
+.textarea:focus + .comment-label,
+.textarea:not(:placeholder-shown) + .comment-label {
+  color: $accent-text-color;
+  transform: translateY(-34px);
+}
+
+.comment-label {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $primary-text-color;
+
+  transition: color $transition-duration $transition-timing-function,
+    transform $transition-duration $transition-timing-function;
+}
+
+// Оформление checkbox
+.form-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+}
+
+.icon-check {
+  display: block;
+  width: 15px;
+  height: 15px;
+
+  margin-right: 8px;
+
+  border: 1px solid #212121;
+  border-radius: 2px;
+
+  transition: background-color $transition-duration $transition-timing-function;
+}
+
+.checkbox-input:checked + .icon-check {
+  border-color: $accent-text-color;
+  background-color: $accent-text-color;
+  background-image: url('../image/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+
+// Оформление сслыки на Условия договора
+.agreement {
+  text-decoration: underline;
+  color: $accent-text-color;
+}

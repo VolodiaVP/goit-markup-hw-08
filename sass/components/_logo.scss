@@ -1,0 +1,25 @@
+.logo-web {
+  color: $accent-text-color;
+}
+
+%logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+
+.logo-header {
+  @extend %logo;
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: $title-text-color;
+}
+.logo-footer {
+  @extend %logo;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: $white-color;
+}

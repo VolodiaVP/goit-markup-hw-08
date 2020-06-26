@@ -1,0 +1,126 @@
+.footer {
+  color: $white-color;
+  background-color: $footer-bgc;
+}
+
+.flex-footer {
+  //display: flex;
+  // justify-content: space-between;
+  // align-items: baseline;
+  margin-bottom: 18px;
+  padding-top: 48px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Адрес футер
+.address-container {
+  min-width: 214px;
+}
+
+.address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.address a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color $transition-duration $transition-timing-function;
+}
+
+.address a:hover,
+.address a:focus {
+  color: $accent-text-color;
+}
+
+.address-list {
+  @extend %list;
+}
+
+// Присоединяйся футер
+.social-container {
+  min-width: 206px;
+}
+
+.appeal {
+  @extend %text;
+  margin-top: 0px;
+  margin-bottom: 21px;
+}
+
+.social-list {
+  @extend %list;
+  // display: flex;
+  margin-bottom: 0px;
+
+  & .social-item:not(:last-child) {
+    margin-right: 11px;
+  }
+}
+
+.social-footer {
+  @extend %social-link;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon {
+  @extend %social-icon;
+  fill: $white-color;
+
+  transition: background-color $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-text-color;
+  }
+}
+
+// Подпишись на рассылку футер
+.subscribe-container {
+  width: 100%;
+}
+
+.form-footer {
+  display: block;
+  //display: flex;
+  // align-items: center;
+  //justify-content: start;
+}
+
+.email {
+  width: 358px;
+  height: 50px;
+  margin-right: 8px;
+  padding: 15px 16px;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+// Кнопка подписки футер
+.subscribe {
+  @extend %button;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 900;
+  height: 50px;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+
+  fill: currentColor;
+}
