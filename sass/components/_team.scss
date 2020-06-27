@@ -9,7 +9,6 @@
 }
 
 .team-item {
-  // width: calc((100% - 3 * 30px) / 4);
   overflow: hidden;
 
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -17,7 +16,9 @@
   border-radius: 4px;
   background-color: $white-color;
 
-  //&:not(:last-child) {margin-right: 30px;}
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .team-pic {
@@ -28,9 +29,9 @@
 
 .team-info {
   padding-top: 30px;
-  padding-right: 31px;
   padding-bottom: 24px;
-  padding-left: 32px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .team-title {

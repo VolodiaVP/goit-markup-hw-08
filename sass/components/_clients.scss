@@ -1,24 +1,27 @@
 /* Постоянные клиенты */
 .clients {
   @extend %list;
-  //display: flex;
-  //justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients-item {
-  width: calc((100% - 5 * 30px) / 6);
+  width: calc((100% - 4 * 15px) / 2);
   height: 90px;
+  margin: 15px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  //&:not(:nth-child(2n)) {margin-right: 30px;}
+
+  //&:nth-last-child(-n + 2) {margin-bottom: 0px;}
 }
 
 .clients-link {
-  //display: flex;
-  //justify-content: center;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
+
   border: 1px solid $clients-border;
   border-radius: 4px;
 
