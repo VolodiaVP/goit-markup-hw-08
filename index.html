@@ -10,15 +10,15 @@
   <body>
     <!-- Хедер страницы -->
     <header class="header">
-      <div class="container pages-nav">
-        <nav class="main-nav">
+      <div class="container">
+        <nav class="navigation">
           <a href="" class="logo-header"
             ><span class="logo-web">Web</span> Studio
           </a>
 
           <button
             type="button"
-            class="menu-button is-open"
+            class="menu-button"
             aria-expanded="false"
             aria-controls="menu-container"
             data-menu-button
@@ -28,31 +28,35 @@
               height="40"
               aria-label="Переключатель мобильного меню"
             >
-              <use class="icon-cross" href="./image/sprite.svg#cross"></use>
               <use class="icon-menu" href="./image/sprite.svg#menu"></use>
+              <use class="icon-cross" href="./image/sprite.svg#cross"></use>
             </svg>
           </button>
 
-          <!-- <div class="menu-container" data-menu>
-            <ul class="site-nav">
-              <li class="item"><a href="" class="link current">Студия</a></li>
-              <li class="item">
-                <a href="./portfolio.html" class="link">Портфолио </a>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="pages-nav">
+              <li class="pages-item">
+                <a href="" class="pages-link current">Студия</a>
               </li>
-              <li class="item"><a href="" class="link">Контакты</a></li>
+              <li class="pages-item">
+                <a href="./portfolio.html" class="pages-link">Портфолио </a>
+              </li>
+              <li class="pages-item">
+                <a href="" class="pages-link">Контакты</a>
+              </li>
             </ul>
 
-            <ul class="nav-items">
-              <li class="item">
-                <a href="mailto:info@devstudio.com" class="link mail">
+            <ul class="contacts">
+              <li class="contacts-item">
+                <a href="mailto:info@devstudio.com" class="contacts-link mail">
                   <svg class="mail-icon">
                     <use href="./image/sprite.svg#envelope"></use>
                   </svg>
                   info@devstudio.com
                 </a>
               </li>
-              <li class="item">
-                <a href="tel:+380961111111" class="link phone">
+              <li class="contacts-item">
+                <a href="tel:+380961111111" class="contacts-link phone">
                   <svg class="phone-icon">
                     <use href="./image/sprite.svg#phone"></use>
                   </svg>
@@ -60,7 +64,7 @@
                 </a>
               </li>
             </ul>
-          </div> -->
+          </div>
         </nav>
       </div>
     </header>
