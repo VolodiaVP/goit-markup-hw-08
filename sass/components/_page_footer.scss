@@ -9,9 +9,7 @@
 
 // Адрес футер
 .address-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-mobile;
 }
 
 .address {
@@ -34,9 +32,7 @@
 
 .address-list {
   @extend %list;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-mobile;
 }
 
 .address-item:not(:last-child) {
@@ -45,9 +41,7 @@
 
 // Присоединяйся футер
 .social-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-mobile;
   margin-bottom: 60px;
 }
 
@@ -87,9 +81,7 @@
 
 // Подпишись на рассылку футер
 .subscribe-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-mobile;
   width: 100%;
 }
 
@@ -118,8 +110,8 @@
 // Кнопка подписки футер
 .subscribe {
   @extend %button;
-  display: flex;
-  align-items: center;
+  @include flex-mobile;
+  flex-direction: row;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;

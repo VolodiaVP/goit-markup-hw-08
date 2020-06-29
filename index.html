@@ -16,8 +16,9 @@
             ><span class="logo-web">Web</span> Studio
           </a>
 
-          <button type="button"
-            class="button-menu"
+          <button
+            type="button"
+            class="menu-button is-open"
             aria-expanded="false"
             aria-controls="menu-container"
             data-menu-button
@@ -27,38 +28,40 @@
               height="40"
               aria-label="Переключатель мобильного меню"
             >
-              <use href="./image/sprite.svg#cross"></use>
-              <use href="./image/sprite.svg#menu"></use>
+              <use class="icon-cross" href="./image/sprite.svg#cross"></use>
+              <use class="icon-menu" href="./image/sprite.svg#menu"></use>
             </svg>
           </button>
 
-          <!-- <ul class="site-nav">
-            <li class="item"><a href="" class="link current">Студия</a></li>
-            <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио </a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
+          <!-- <div class="menu-container" data-menu>
+            <ul class="site-nav">
+              <li class="item"><a href="" class="link current">Студия</a></li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио </a>
+              </li>
+              <li class="item"><a href="" class="link">Контакты</a></li>
+            </ul>
 
-        <ul class="nav-items">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link mail">
-              <svg class="mail-icon">
-                <use href="./image/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link phone">
-              <svg class="phone-icon">
-                <use href="./image/sprite.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul> -->
+            <ul class="nav-items">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="link mail">
+                  <svg class="mail-icon">
+                    <use href="./image/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="link phone">
+                  <svg class="phone-icon">
+                    <use href="./image/sprite.svg#phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </nav>
       </div>
     </header>
 
@@ -189,7 +192,7 @@
                 <h3 class="team-title">Николай Кучеренко</h3>
                 <p class="team-description">Product Designer</p>
                 <ul class="team-social">
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.instagram.com/"
@@ -200,7 +203,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://twitter.com/"
@@ -211,7 +214,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.facebook.com/"
@@ -222,7 +225,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.linkedin.com/"
@@ -250,7 +253,7 @@
                 <h3 class="team-title">Ольга Иванова</h3>
                 <p class="team-description">Frontend Developer</p>
                 <ul class="team-social">
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.instagram.com/"
@@ -261,7 +264,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://twitter.com/"
@@ -272,7 +275,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.facebook.com/"
@@ -283,7 +286,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.linkedin.com/"
@@ -311,7 +314,7 @@
                 <h3 class="team-title">Андрей Шевченко</h3>
                 <p class="team-description">Marketing</p>
                 <ul class="team-social">
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.instagram.com/"
@@ -322,7 +325,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://twitter.com/"
@@ -333,7 +336,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.facebook.com/"
@@ -344,7 +347,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.linkedin.com/"
@@ -372,7 +375,7 @@
                 <h3 class="team-title">Иван Николаев</h3>
                 <p class="team-description">UI Designer</p>
                 <ul class="team-social">
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.instagram.com/"
@@ -383,7 +386,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://twitter.com/"
@@ -394,7 +397,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.facebook.com/"
@@ -405,7 +408,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-item">
                     <a
                       class="social-link"
                       href="https://www.linkedin.com/"
@@ -484,8 +487,12 @@
           <address class="address">
             <ul class="address-list">
               <li class="address-item">г. Киев, б-р Леси Украинки, 26</li>
-              <li class="address-item"><a href="mailto:info@example.com">info@example.com</a></li>
-              <li class="address-item"><a href="tel:+380991111111">+38 099 111 11 11</a></li>
+              <li class="address-item">
+                <a href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="address-item">
+                <a href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
             </ul>
           </address>
         </div>
@@ -655,5 +662,6 @@
 
     <!-- Скрипт для модального окна -->
     <script src="./JS/modal.js"></script>
+    <script src="./JS/menu.js"></script>
   </body>
 </html>

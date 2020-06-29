@@ -64,6 +64,10 @@
   @extend %social-link;
 }
 
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social-icon {
   @extend %social-icon;
   fill: #afb1b8;

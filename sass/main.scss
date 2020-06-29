@@ -4,6 +4,7 @@
 @import './utils/breakpoints';
 @import './components/container';
 @import './components/common';
+@import './components/menu';
 @import './components/logo';
 @import './components/page_header';
 @import './components/hero';
@@ -14,6 +15,7 @@
 @import './components/activities';
 @import './components/team';
 @import './components/clients';
+@import './utils/mixins';
 @import './components/page_footer';
 @import './components/portfolio_filters';
 @import './components/portfolio_examples';

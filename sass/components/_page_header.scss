@@ -1,18 +1,7 @@
 // Навигация
 .header {
+  position: relative;
   border-bottom: 1px solid $header-border;
-}
-
-.button-menu {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 }
 
 //.pages-nav {
@@ -20,10 +9,12 @@
 //align-items: center;
 //}
 
-//.main-nav {
-//display: flex;
-// align-items: center;
-//}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 60px;
+}
 
 .site-nav {
   @extend %list;
