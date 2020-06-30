@@ -4,6 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients-item {
@@ -11,9 +15,10 @@
   height: 90px;
   margin: 15px;
 
-  //&:not(:nth-child(2n)) {margin-right: 30px;}
-
-  //&:nth-last-child(-n + 2) {margin-bottom: 0px;}
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
 }
 
 .clients-link {

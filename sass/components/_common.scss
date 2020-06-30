@@ -45,6 +45,10 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+  }
 }
 
 // Секции

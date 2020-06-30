@@ -5,6 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+
   padding: 93px 15px;
   overflow-y: scroll;
 
@@ -21,11 +22,13 @@
 }
 
 .backdrop.is-hidden .modal {
-  transform: scale(0.5);
+  transform: translate(-50%, -50%);
 }
 
 // Модальное окно
 .modal {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 450px;
   width: 100%;
   padding-top: 8px;
@@ -37,6 +40,23 @@
     0px 1px 3px rgba(0, 0, 0, 0.12);
 
   transition: transform $transition-duration $transition-timing-function;
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    max-width: 528px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 // Кнопка закрытия модального окна
@@ -61,6 +81,14 @@
   &:hover {
     transform: scale(1.25);
     border: 1px solid $accent-text-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }
 
@@ -103,6 +131,10 @@
   letter-spacing: 0.03em;
 
   color: $title-text-color;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }
 
 // Контейнер поля ввода данных формы модального окна
@@ -228,6 +260,11 @@
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: $primary-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .icon-check {

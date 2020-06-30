@@ -1,6 +1,6 @@
 .activities {
-  //display: flex;
-  //justify-content: center;
+  display: flex;
+  justify-content: center;
   @extend %list;
 
   .item:not(:last-child) {

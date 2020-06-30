@@ -1,6 +1,35 @@
 // Преимущества
 .advantages {
   @extend %list;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin: -15px;
+  }
+}
+
+.advantages-item {
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .advantages-container {
@@ -31,7 +60,7 @@
 
 .advantages-description {
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;

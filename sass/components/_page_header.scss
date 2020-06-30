@@ -9,4 +9,8 @@
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
+
+  @media screen and (min-width: $tablet) {
+    min-height: 80px;
+  }
 }

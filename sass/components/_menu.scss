@@ -53,6 +53,11 @@
       display: block;
     }
   }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    position: relative;
+  }
 }
 
 //Навигация по страницам
@@ -62,6 +67,10 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+  }
 }
 
 .pages-item:not(:last-child) {
