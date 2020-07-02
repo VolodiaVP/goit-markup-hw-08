@@ -5,11 +5,34 @@
   background-color: $footer-bgc;
 }
 
-//.flex-footer {}
+.flex-footer {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.footer-tablet {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    align-items: baseline;
+  }
+}
 
 // Адрес футер
 .address-container {
-  @include flex-mobile;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 69px;
+    text-align: left;
+  }
 }
 
 .address {
@@ -19,6 +42,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 .address a {
   color: rgba(255, 255, 255, 0.6);
@@ -32,7 +59,6 @@
 
 .address-list {
   @extend %list;
-  @include flex-mobile;
 }
 
 .address-item:not(:last-child) {
@@ -41,14 +67,25 @@
 
 // Присоединяйся футер
 .social-container {
-  @include flex-mobile;
+  text-align: center;
   margin-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+    //margin-right: 94px;
+  }
 }
 
 .appeal {
   @extend %text;
   margin-top: 0px;
   margin-bottom: 20px;
+
+  text-align: left;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .social-list {
@@ -81,13 +118,19 @@
 
 // Подпишись на рассылку футер
 .subscribe-container {
-  display: block;
-  width: 100%;
-  text-align: center;
+  text-align: left;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .form-footer {
-  display: block;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
 }
 
 .email {
@@ -107,6 +150,17 @@
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 8px;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 358px;
+  }
 }
 
 // Кнопка подписки футер
