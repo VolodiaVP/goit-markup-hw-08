@@ -21,6 +21,11 @@
   margin-top: 16px;
   margin-bottom: 16px;
   color: $title-text-color;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 .logo-footer {
   @extend %logo;

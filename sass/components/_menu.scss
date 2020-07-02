@@ -11,7 +11,7 @@
     fill: $accent-text-color;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
@@ -29,25 +29,20 @@
 }
 
 .menu-container {
-  z-index: 1;
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  display: none;
-
-  padding-top: 60px;
-  padding-bottom: 60px;
-  width: 100%;
-
-  border-top: 1px solid $header-border;
   background-color: $white-color;
 
   @media screen and (max-width: 767px) {
     display: none;
+    z-index: 1;
     position: absolute;
     top: 100%;
     left: 0;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
     width: 100%;
+
+    border-top: 1px solid $header-border;
 
     &.is-open {
       display: block;
@@ -56,25 +51,34 @@
 
   @media screen and (min-width: $tablet) {
     display: flex;
-    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 }
 
 //Навигация по страницам
 .pages-nav {
-  @extend %list;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 60px;
+  @extend %list;
+  margin-bottom: 60px;
 
   @media screen and (min-width: $tablet) {
     flex-direction: row;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 .pages-item:not(:last-child) {
   margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0px;
+    margin-right: 50px;
+  }
 }
 
 .pages-link {
@@ -82,8 +86,8 @@
   padding-bottom: 8px;
 
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.16;
+  font-size: 14px;
+  line-height: 1.14;
   color: $title-text-color;
 
   transition: color $transition-duration $transition-timing-function;
@@ -95,24 +99,24 @@
 }
 
 // Индикация текудая страница
-.pages-nav .current {
+.pages-item .current {
   position: relative;
   color: $accent-text-color;
-}
 
-.pages-nav .current::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-  display: block;
+    display: block;
 
-  content: '';
-  width: 100%;
-  height: 4px;
+    content: '';
+    width: 100%;
+    height: 4px;
 
-  background-color: $accent-text-color;
-  border-radius: 2px;
+    background-color: $accent-text-color;
+    border-radius: 2px;
+  }
 }
 
 // Email and phone
@@ -120,13 +124,27 @@
   @extend %list;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  //align-items: center;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    margin-left: auto;
+
+    & .contacts-item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .contacts-link {
   color: $primary-text-color;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.02em;
 }
@@ -135,6 +153,10 @@
 .contacts-link.mail {
   display: inline-block;
   margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
 }
 
 .mail {
