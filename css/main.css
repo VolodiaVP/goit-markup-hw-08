@@ -1193,11 +1193,10 @@ img {
 
 .activities .item {
   position: relative;
-  width: calc((100% -2 * 30px) / 3);
+  width: calc((100% - 2 * 30px) / 3);
 }
 
 .activities-pic {
-  display: block;
   margin-bottom: 0px;
 }
 
@@ -1264,12 +1263,6 @@ img {
   .team-item:not(:last-child) {
     margin-bottom: 30px;
   }
-}
-
-.team-pic {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .team-info {
@@ -1709,9 +1702,7 @@ img {
 }
 
 .examples-pic {
-  display: block;
-  max-width: 100%;
-  min-height: 294px;
+  max-height: 294px;
   margin-bottom: 0px;
 }
 
@@ -1781,7 +1772,7 @@ img {
   padding: 63px 24px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.56;
+  line-height: 1.55;
   letter-spacing: 0.03em;
   color: #ffffff;
   opacity: 0;
